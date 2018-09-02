@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 
-class LoginScreen extends Component {
+class PlanScreen extends Component {
 
   // constructor(props) {
   //   super(props)
@@ -15,18 +15,18 @@ class LoginScreen extends Component {
   //   }
   // }
 
- 
+
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Login</Text>
+        <Text>Plan</Text>
       </View>
     );
   }
 }
 
-export default LoginScreen;
+export default PlanScreen;
 
 
 const styles = StyleSheet.create({
