@@ -8,12 +8,6 @@ import {
 
 class PlanScreen extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     username: '',
-  //   }
-  // }
 
 
 

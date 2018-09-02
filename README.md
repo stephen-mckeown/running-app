@@ -1,3 +1,12 @@
+
+### Runnning App
+The purpose of the app is to train from zero running to running to 5k and to project the date on when the user will be fit to complete the 5km.
+
+
+
+
+
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
