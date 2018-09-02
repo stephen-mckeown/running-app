@@ -4,23 +4,18 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
 } from 'react-native';
 
-class LoginScreen extends Component {
+const styles = StyleSheet.create(global.styles);
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     username: '',
-  //   }
-  // }
 
- 
+class LoginScreen extends Component { 
 
   render() {
     return (
       <View style={styles.container}>
+        <Text>Running App</Text>
         <Text>Login</Text>
         <Button
           title="Login"
@@ -34,11 +29,11 @@ class LoginScreen extends Component {
 export default LoginScreen;
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });

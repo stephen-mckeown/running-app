@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
+import './app/Globals.js'
+
 import LoginScreen from './app/screens/Login';
 import PlanScreen from './app/screens/Plan';
 
