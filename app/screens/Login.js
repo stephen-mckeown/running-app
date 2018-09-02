@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Button
 } from 'react-native';
 
 class LoginScreen extends Component {
@@ -21,6 +22,10 @@ class LoginScreen extends Component {
     return (
       <View style={styles.container}>
         <Text>Login</Text>
+        <Button
+          title="Login"
+          onPress={() => this.props.navigation.navigate('Plan')}
+        />
       </View>
     );
   }
