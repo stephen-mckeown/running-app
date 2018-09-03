@@ -10,6 +10,8 @@ import {
 const styles = StyleSheet.create(global.styles);
 
 
+
+
 class PlanScreen extends Component {
   constructor(props) {
     super(props)
@@ -22,28 +24,50 @@ class PlanScreen extends Component {
   componentDidMount() {
     this.setState({
       plan: [
-        { title: 'Title1', data: ['item1', 'item2'] },
-        { title: 'Title2', data: ['item3', 'item4'] },
-        { title: 'Title3', data: ['item5', 'item6'] },
+        { title: 'Week 1', data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saterday', 'Sunday'] },
+        { title: 'Week 2', data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saterday', 'Sunday']},
+        { title: 'Week 3', data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saterday', 'Sunday'] },
       ]
     })
   }
+
+ // _keyExtractor = (item, index) => item.id;
+
+
+  renderItem(item) {
+    return (
+      <View style={styles.rowSchedule}>
+        <Text>{item}</Text>
+    </View>
+    );
+  }
+
+
+  renderSectionHeader (section) {
+    return(
+      <View>
+     <Text style={styles.SectionHeaderStyle}> {section.title} </Text> 
+      </View>
+    )
+    }
 
 
 
 
   render() {
     return (
-      <View style={styles.container}>
+
+      <View style={styles.containerSchedule}>
         <Text>Plan</Text>
+     
         <SectionList
-          renderItem={({ item, index, section }) => <Text key={index}>{item}</Text>}
-          renderSectionHeader={({ section: { title } }) => (
-            <Text style={{ fontWeight: 'bold' }}>{title}</Text>
-          )}
           sections={this.state.plan}
-          keyExtractor={(item, index) => item + index}
+          renderItem={({ item }) => this.renderItem(item)}
+          renderSectionHeader={this.renderSectionHeader}
+          keyExtractor={this._keyExtractor}
+
         />
+    
       </View>
     );
   }
@@ -51,12 +75,8 @@ class PlanScreen extends Component {
 
 export default PlanScreen;
 
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+/*
+ renderSectionHeader={({ section: { title } }) => (
+            <Text style={{ fontWeight: 'bold' }}>{title}</Text>
+          )}
+          */
