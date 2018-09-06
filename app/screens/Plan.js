@@ -5,6 +5,7 @@ import {
   Text,
   View,
   SectionList,
+  TouchableHighlight
 } from 'react-native';
 
 const styles = StyleSheet.create(global.styles);
@@ -36,14 +37,19 @@ class PlanScreen extends Component {
 
   renderItem(item) {
     return (
+      <TouchableHighlight
+      onPress={this.onPress}
+        style={styles.rowSelect}
+        >
       <View style={styles.rowSchedule}>
         <Text>{item}</Text>
     </View>
+        </TouchableHighlight>
     );
   }
 
 
-  renderSectionHeader (section) {
+  renderSectionHeader ({section}) {
     return(
       <View>
      <Text style={styles.SectionHeaderStyle}> {section.title} </Text> 
@@ -51,6 +57,9 @@ class PlanScreen extends Component {
     )
     }
 
+  onPress = () => {
+    console.log('selection pressed')
+  }
 
 
 

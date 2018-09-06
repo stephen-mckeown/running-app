@@ -33,5 +33,8 @@ global.styles = {
     padding: 5,
     color: 'black',
   },
+  rowSelect: {
+    backgroundColor:'gray'
+  }
 }
 
