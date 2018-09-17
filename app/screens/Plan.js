@@ -37,8 +37,10 @@ class PlanScreen extends Component {
 
   renderItem(item) {
     return (
+      
+     
       <TouchableHighlight
-      onPress={this.onPress}
+        onPress={() => this.props.navigation.navigate('DailyPlan')}
         style={styles.rowSelect}
         >
       <View style={styles.rowSchedule}>
